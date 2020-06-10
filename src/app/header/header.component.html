@@ -1,0 +1,54 @@
+
+
+
+<!-- HOME SECTION  -->
+<div id ="home">
+<!--start of Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<a class="navbae-brand" href="#"><img src ="./assets/img/logo.png" style="height:2em"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+	<span class= "navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarResponsive">
+
+	<ul class="navbar-nav ml-auto">
+		
+		<li class="nav-item">
+				<a class="nav-link" routerLink="/home">Home</a>
+
+			<!-- <a class="nav-link" href="index.html">Home </a> -->
+		</li>
+		
+		<div *ngIf="msg!=undefined;then block else elseblock"></div>
+			<ng-template #block>
+					
+			<li class="nav-item">
+					<h4 class="text text-info">hello {{msg}}</h4>
+				</li>
+				<li class="nav-item">
+						<a class="nav-link" href="/logout">logout</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/viewride">view ride</a>
+					</li>
+			</ng-template>
+			<ng-template #elseblock>
+				
+		
+		<li class="nav-item">
+			<a class="nav-link" href="/registration">Registration</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/login">Login</a>
+		</li>
+	</ng-template>
+	<li class="nav-item">
+			<a class="nav-link" href="/booking">Book A Ride</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="about.html">About us</a>
+		</li>
+	</ul>
+</div>
+</nav>

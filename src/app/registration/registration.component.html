@@ -1,0 +1,160 @@
+<!-- 
+    <script>
+        $(document).ready(function() {
+                $(".centered").hide();
+               $(".centered").slideDown( 'slow',function() { $(this).show() });//, function(){ 
+                 $("#includedcontent").load("base.html"); 
+                 $(".footer").load("footer.html");
+    });
+          
+    </script>
+    <link type="text/css" href="lrcss.css" rel="stylesheet">
+
+</head>
+<body style="overflow: hidden;">
+    <script>
+    
+    
+</script>    
+     -->
+<div id="reg">
+<div id="book">
+        <!-- <div id="includedcontent"></div> -->
+<app-header></app-header>
+  <form class="centered" (ngSubmit)="saveuser()" [formGroup]="register" action="/sign_up" method="post">
+      <!-- <center> -->
+<h1> Registration </h1>
+<h5 class="text text-danger">{{msg}}</h5>
+<table  style="font-size: 1.100em">
+    
+<tr>
+<td>
+name
+</td></tr><tr><td>
+        <input type="text" name="name"  formControlName="name" required>
+	</td>
+	</tr>
+	<tr>
+			<td>
+	
+				<span class="text-danger" *ngIf="(name.invalid&&name.touched)&& name.errors.minlength">
+					name should not of length less than 3 
+				  </span>
+			</td>
+		
+		</tr>
+	<tr>
+		<td><span class="text-danger" *ngIf="(name.invalid&&name.touched) && name.errors.required">
+			name required.
+		  </span>
+		  </td>
+	</tr>
+<tr>
+<td>
+username
+</td></tr><tr><td>
+	<input type="text" formControlName="uname"  name="uname" required>
+	</td>
+	<tr>
+			<td>
+				
+				<span class="text-danger" *ngIf="(uname.invalid&&uname.touched)&& uname.errors.required">
+					username  required
+				  </span>
+			</td>
+		
+		</tr>
+	<tr>
+		<td>
+
+			<span class="text-danger" *ngIf="(uname.invalid&&uname.touched)&& uname.errors.minlength">
+				username should not of length less than 3 
+			  </span>
+		</td>
+	
+	</tr>
+	
+	<tr>
+	<td>
+	password
+	</td></tr><tr>
+	<td>
+	<input id="pw" type="password" formControlName="pass" name="pass" minlength=6 required >
+	</td>
+	</tr>
+	<tr>
+			<td>
+	
+				<span class="text-danger" *ngIf="(pass.invalid&&pass.touched)&& pass.errors.required">
+					password required
+				  </span>
+			</td>
+		
+		</tr>
+        <tr>
+	<td>
+	confirm password
+	</td></tr><tr>
+	<td>
+	<input id="cpw" type="password" formControlName="cpass"  name="cpass" required><label id="pass"></label>
+	</td>
+	</tr>
+	<tr>
+			<td>
+	
+				<span class="text-danger" *ngIf="(cpass.invalid&&cpass.touched)&& cpass.errors.required">
+					password required
+				  </span>
+			</td>
+		
+		</tr>
+         <tr>
+	<td>
+            contact no
+	</td></tr><tr>
+	<td>
+            <input id="contactno"  formControlName="contact" name="contactno" type="text"   name="contactno" required><label id="error"></label>
+	</td>
+	</tr>
+	<tr>
+			<td>
+	
+				<span class="text-danger" *ngIf="(contact.invalid&&contact.touched)&& contact.errors.required">
+					contactno required
+				  </span>
+			</td>
+		
+		</tr>
+         <tr>
+	<td>
+            email
+	</td>
+</tr>
+
+	<tr>
+	<td>
+	<input type="email" formControlName="email" name="email">
+	</td>
+	</tr>
+	<tr>
+			<td>
+	
+				<span class="text-danger" *ngIf="(email.invalid&&email.touched)&& email.errors.required">
+					email required
+				  </span>
+			</td>
+		
+		</tr>
+	<tr>
+	<td>
+            <input id="s" type="submit" value="submit"  class="btn btn-primary">
+            &nbsp;
+                            <input type="reset"  class="btn btn-danger">
+	</td>
+	</tr>
+</table></form></div>
+<!--<div class="footer">-->
+           
+                    
+        <!-- </div> -->
+	</div>

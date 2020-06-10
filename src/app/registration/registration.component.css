@@ -1,0 +1,72 @@
+
+  
+    h1 {
+        text-shadow: 3px 2px grey;
+      }
+      input:focus {
+        border: 3px solid #555;
+      }
+      .t  
+      {
+          
+          background-color: black;
+      }
+         
+     #reg
+      {   
+                font-family: 'Dancing Script', cursive;
+                /* overflow: hidden; */
+                background-image:url(./b.jpg);
+                background-repeat: no-repeat;
+               height: 150vh; 
+                 background-size: cover;
+      }
+      td
+      {
+          padding:2px;
+          text-transform:  capitalize;
+          color:black;
+          font-weight: bold;
+      }
+      
+      .centered
+      {
+          position: relative;
+          width:300px;
+          margin:auto;
+          top:20;
+          /* margin-top:2em; */
+          background-color: rgb(102, 217, 255,0.8);
+            color:white;
+            
+           box-shadow:0 0 30px black;
+           z-index: 1;
+           
+      }  
+      
+      
+      table, th, td {
+        text-align:center;
+        margin:auto;
+        
+      }
+      .footer {
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: grey;
+        color: white;
+        text-align: center;
+      }
+      /*
+      To change this license header, choose License Headers in Project Properties.
+      To change this template file, choose Tools | Templates
+      and open the template in the editor.
+      */
+      /* 
+          Created on : Sep 8, 2019, 9:24:48 PM
+          Author     : Admin
+      */
+      
+      

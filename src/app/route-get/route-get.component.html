@@ -1,0 +1,28 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>source</td>
+        <td>destination</td>
+        <td>distance</td>
+
+    </tr>
+    </thead>
+  
+    <tbody>
+        <tr *ngFor="let product1 of products1">
+            <td>{{ route.place1 }}</td>
+            <td>{{ route.place2 }}</td>
+            <td>{{ route.distance }}</td>
+
+        </tr>
+    </tbody>
+  </table>
+
+  <tbody>
+    <tr *ngFor="let route of routes">
+        <td>{{ route.place1 }}</td>
+        <td>{{ route.place2 }}</td>
+        <td>{{ route.distance }}</td>
+
+    </tr>
+</tbody>
